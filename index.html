@@ -11,15 +11,30 @@
   <body>
 
     <section class="introduction">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 text-center" id="title">
-            <h1>Welcome to the Ingredient Hack!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sint dolorum corporis aspernatur quidem provident minus soluta vitae accusamus eos dolore, mollita in inventore maxime ducimus tenetur exercitationem. Quae, labore?</p>
-            <button class="btn btn-primary" type="button">Get Started <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
-          </div>
+      
+      <div class="navbar navbar-default">
+        <div class="container-fluid">
+          <h1>The Ingredient Hack</h1>
         </div>
       </div>
+      
+      <div class="row">
+
+        <div class="col-xs-3" id="sidebar">
+          <h2>Welcome to The Ingredient Hack!</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis tenetur explicabo sequi pariatur, perferendis voluptates suscipit odit ipsa dicta perspiciatis, totam quasi autem dolorem. Sed earum dolore quasi quisquam sit.</p>
+          <form>
+            <div class="form-group">
+              <label for="ingredientEntry">What's in your pantry?</label>
+              <input type="text" class="form-control" id="ingredients" placeholder="e.g. chicken, rice, etc.">
+              <button class="btn btn-default btn-primary" type="submit" value="Submit">Submit</button>
+            </div>
+          </form>  
+        </div>
+
+        <div class="col-xs-9" id="recipe-display">Recipe</div>
+      </div>
+      
     </section>
 
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>

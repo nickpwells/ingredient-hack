@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+
+}
+
 $font-stack: Montserrat, Helvetica, sans-serif;
 $background: #f9f9f9;
 $primary-color-500: #673ab7;
@@ -7,6 +15,7 @@ $primary-color-100: #d1c4e9;
 $primary-color-700: #512da8;
 $accent-color: #ffd740;
 $accent-color-fallback: #ffe57f;
+$sidebar-br: 15px;
 
 
 
@@ -22,11 +31,58 @@ body {
 	box-shadow: 2px 2px 10px black;
 }
 
+.row {
+	height: 100%;
+	padding: 0 2em 0 2em;
+}
+
 #sidebar {
 	position: relative;
 	height: 100%;
-	padding: 3em;
+	padding: 1em;
 	background-color: $accent-color;
 	overflow: hidden;
 }
 
+#ingredient-display {
+	border: 1px solid black;
+	margin-top: 1em;
+	height: 15em;
+	padding: 0;
+}
+
+#sidebar, #ingredient-display {
+	@include border-radius(10px);
+	box-shadow: 2px 2px 10px black;
+	border-color: $primary-color-500;
+	border-width: 2px;
+}
+
+#ingredient-display {
+	h5 {
+		@include border-radius(5px 5px 0 0);
+		background-color: $primary-color-500;
+		margin-top: 0;
+		padding: .25em .25em .25em 1em;
+		color: #eeeeee;
+	}
+}
+
+.buttonCenter {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.buttonCenter {
+	button {
+		background-color: $primary-color-500;
+		border-color: $primary-color-500;
+	}
+}
+
+.buttonCenter {
+	button:hover {
+		background-color: $primary-color-700;
+		border-color: $primary-color-700;
+	}
+}

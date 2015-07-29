@@ -9,11 +9,52 @@ body {
   border: none;
   box-shadow: 2px 2px 10px black; }
 
+.row {
+  height: 100%;
+  padding: 0 2em 0 2em; }
+
 #sidebar {
   position: relative;
   height: 100%;
-  padding: 3em;
+  padding: 1em;
   background-color: #ffd740;
   overflow: hidden; }
+
+#ingredient-display {
+  border: 1px solid black;
+  margin-top: 1em;
+  height: 15em;
+  padding: 0; }
+
+#sidebar, #ingredient-display {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+  border-color: #673ab7;
+  border-width: 2px; }
+
+#ingredient-display h5 {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  background-color: #673ab7;
+  margin-top: 0;
+  padding: .25em .25em .25em 1em;
+  color: #eeeeee; }
+
+.buttonCenter {
+  text-align: center;
+  margin-top: 1em; }
+
+.buttonCenter button {
+  background-color: #673ab7;
+  border-color: #673ab7; }
+
+.buttonCenter button:hover {
+  background-color: #512da8;
+  border-color: #512da8; }
 
 /*# sourceMappingURL=stylesheet.css.map */

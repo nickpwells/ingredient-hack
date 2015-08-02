@@ -9,6 +9,21 @@ body {
   border: none;
   box-shadow: 2px 2px 10px black; }
 
+#about {
+  float: right;
+  opacity: .75;
+  color: #e0e0e0;
+  margin-top: 8px;
+  cursor: pointer; }
+
+#aboutModal {
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
 .row {
   height: 100%;
   padding: 0 2em 0 2em; }
@@ -49,12 +64,18 @@ body {
   text-align: center;
   margin-top: 1em; }
 
-.buttonCenter button {
+.buttonCenter button,
+.buttonCenter button:focus,
+.buttonCenter button:active {
   background-color: #673ab7;
-  border-color: #673ab7; }
+  border-color: #673ab7;
+  outline: none; }
 
 .buttonCenter button:hover {
   background-color: #512da8;
   border-color: #512da8; }
+
+#ingredient-display button:hover {
+  text-decoration: line-through; }
 
 /*# sourceMappingURL=stylesheet.css.map */

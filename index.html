@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ThePlayerComparer</title>
+    <title>IngredientHack</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css">
   </head>
@@ -14,7 +14,23 @@
       
       <div class="navbar navbar-default">
         <div class="container-fluid">
-          <h1>The Ingredient Hack</h1>
+          <h1>The Ingredient Hack<small id="about" data-toggle="modal" data-target="#aboutModal">About</small></h1>
+        </div>
+      </div>
+
+      <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="aboutModalTitle">About</h4>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique, accusamus qui nobis aspernatur laborum quas quidem natus, veritatis pariatur distinctio saepe tempore explicabo hic iste consequatur animi iure voluptatibus!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -47,5 +63,6 @@
 
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

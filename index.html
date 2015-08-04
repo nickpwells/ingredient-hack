@@ -9,32 +9,31 @@
     <link rel="stylesheet" href="css/stylesheet.css">
   </head>
   <body>
-
-    <section class="introduction">
-      
-      <div class="navbar navbar-default">
-        <div class="container-fluid">
-          <h1>The Ingredient Hack<small id="about" data-toggle="modal" data-target="#aboutModal">About</small></h1>
-        </div>
+  
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <h1>The Ingredient Hack<small id="about" data-toggle="modal" data-target="#aboutModal">About</small></h1>
       </div>
+    </div>
 
-      <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="aboutModalTitle">About</h4>
-            </div>
-            <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique, accusamus qui nobis aspernatur laborum quas quidem natus, veritatis pariatur distinctio saepe tempore explicabo hic iste consequatur animi iure voluptatibus!</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="aboutModalTitle">About</h4>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique, accusamus qui nobis aspernatur laborum quas quidem natus, veritatis pariatur distinctio saepe tempore explicabo hic iste consequatur animi iure voluptatibus!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
+    </div>
       
-      <div class="row">
+    <section class="content">
+      <div class="row container-fluid">
 
         <div class="col-xs-3" id="sidebar">
           <h2>Welcome to The Ingredient Hack!</h2>
@@ -53,13 +52,14 @@
         <div class="col-xs-9" id="recipe-display">Recipe</div>
       </div>
 
-      <div class="row">
+      <div class="row container-fluid">
         <div class="col-xs-3" id="ingredient-display">
-          <h5>Ingredients</h5>
+          <h5>Ingredients<br><span id="clear">Clear</span></h5>
+          <div id="active-ingredients"></div>
         </div>
       </div>
-      
-    </section>
+
+    </section>  
 
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

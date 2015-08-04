@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 	$("button[type='submit']").click(function(e){
 		e.preventDefault();
-		var ingredient = $("#ingredients").val();
+		var ingredient = $("#ingredients").val().toLowerCase();
 		if (ingredient.length > 0) {
 			ingredientsArr.push(ingredient);
 			createIngredientButton(ingredient);
@@ -18,8 +18,8 @@ $(document).ready(function() {
 
 	$("#ingredient-display").on('click', "#active-ingredient", function(e){
 		e.preventDefault();
+		//console.log(ingredientsArr.indexOf(this.text()));
 		$(this).remove();
-		console.log('test');
 	});
 
 
@@ -31,5 +31,5 @@ function createIngredientButton (ingredient) {
 	this.El.id = "active-ingredient"
 	var t = document.createTextNode(ingredient);
 	this.El.appendChild(t);
-	document.getElementById("ingredient-display").appendChild(this.El);
+	document.getElementById("active-ingredients").appendChild(this.El);
 }

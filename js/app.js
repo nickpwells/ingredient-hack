@@ -11,14 +11,19 @@ $(document).ready(function() {
 		var ingredient = $("#ingredients").val().toLowerCase();
 		if (ingredient.length > 0) {
 			ingredientsArr.push(ingredient);
+			console.log(ingredientsArr);
 			createIngredientButton(ingredient);
 		}	
 		$("#ingredients").val('');
 	});
 
-	$("#ingredient-display").on('click', "#active-ingredient", function(e){
+	$("#active-ingredients").on('click', '#active-ingredient', function(e){
 		e.preventDefault();
-		//console.log(ingredientsArr.indexOf(this.text()));
+		
+		//removes item from ingredients array
+		var index = $(this).index();
+		ingredientsArr.splice(index, 1);
+		console.log(ingredientsArr);
 		$(this).remove();
 	});
 

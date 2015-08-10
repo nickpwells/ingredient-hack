@@ -21,7 +21,7 @@ $primary-color-100: #d1c4e9;
 $primary-color-700: #512da8;
 $accent-color: #ffd740;
 $accent-color-fallback: #ffe57f;
-$sidebar-br: 15px;
+
 
 
 
@@ -95,8 +95,8 @@ body {
 	}
 	#clear {
 		float: right;
-		color: red;
-		margin-top: 0;
+		color: $accent-color-fallback;
+		cursor: pointer;
 	}
 	#active-ingredients {
 		height: -moz-calc(100% - 40px);

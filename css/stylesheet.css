@@ -69,8 +69,8 @@ body {
   color: #eeeeee; }
 #ingredient-display #clear {
   float: right;
-  color: red;
-  margin-top: 0; }
+  color: #ffe57f;
+  cursor: pointer; }
 #ingredient-display #active-ingredients {
   height: -moz-calc(100% - 40px);
   height: -webkit-calc(100% - 40px);

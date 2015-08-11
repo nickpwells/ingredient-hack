@@ -44,12 +44,15 @@ $(document).ready(function() {
 	    type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
 	    data: {"ingredients": "chicken", "number": "5"}, // Additional parameters here
 	    dataType: 'json',
-	    success: function(data) { console.log(data); },
+	    success: function(data) { 
+	    	createRecipeThumbnail(data);
+	     },
 	    error: function(err) { alert(err); },
 	    beforeSend: function(xhr) {
 	    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
     	}
 	});
+
 });
 
 function createIngredientButton (ingredient) {
@@ -59,4 +62,25 @@ function createIngredientButton (ingredient) {
 	var t = document.createTextNode(ingredient);
 	this.El.appendChild(t);
 	document.getElementById("active-ingredients").appendChild(this.El);
+}
+
+function createRecipeThumbnail (data) {
+
+	$.each(data, function(index, value){
+		console.log(value);
+
+		this.El = document.createElement("div")
+		this.El.id = "recipe-thumb";
+
+
+		this.img = document.createElement("img");
+		this.img.className = "img-responsive img-thumbnail";
+		this.img.src = value.image;
+
+		this.El.appendChild(this.img);
+	
+		document.getElementById("recipe-display").appendChild(this.El);
+	});
+	
+
 }

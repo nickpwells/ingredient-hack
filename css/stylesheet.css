@@ -95,8 +95,19 @@ body {
 #ingredient-display button {
   margin: 0 .25em .25em .25em;
   border-color: #ffd740; }
-
 #ingredient-display button:hover {
   text-decoration: line-through; }
+
+.img-thumbnail {
+  height: 180px; }
+
+#recipe-thumb {
+  display: inline-block;
+  width: 212px;
+  margin: 0 2em 1em 0;
+  border: 1px solid red; }
+
+#recipe-missed {
+  word-wrap: break-word; }
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -72,15 +72,42 @@ function createRecipeThumbnail (data) {
 		this.El = document.createElement("div")
 		this.El.id = "recipe-thumb";
 
+		//add thumbnail image of recipe
+		var img = document.createElement("img");
+		img.className = "img-responsive img-thumbnail recipe-element";
+		img.id = "recipe-image";
+		img.src = value.image;
+		this.El.appendChild(img);
 
-		this.img = document.createElement("img");
-		this.img.className = "img-responsive img-thumbnail";
-		this.img.src = value.image;
+		//add recipe title
+		var title = document.createElement("h4");
+		title.className = "recipe-element";
+		title.id = "recipe-title";
+		var titleText = document.createTextNode(value.title);
+		title.appendChild(titleText);
+		this.El.appendChild(title);
 
-		this.El.appendChild(this.img);
-	
+		//add missing ingredients
+		var missed = document.createElement("h5");
+		missed.className = "recipe-element";
+		missed.id = "recipe-missed";
+		var missedText = document.createTextNode("You need " + value.missedIngredientCount + " ingredients");
+		missed.appendChild(missedText);
+		this.El.appendChild(missed);
+
 		document.getElementById("recipe-display").appendChild(this.El);
+		recipeThumbHeight();
+		
 	});
-	
+}
 
+//calculates the height of the children within the recipe div
+function recipeThumbHeight () {
+	var childrenHeight = 0
+
+	$("#recipe-thumb:last-child").children(".recipe-element").each(function(){
+		childrenHeight = childrenHeight + $(this).outerHeight(true);
+	});
+
+	return childrenHeight;
 }

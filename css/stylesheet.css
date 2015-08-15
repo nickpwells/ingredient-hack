@@ -103,11 +103,9 @@ body {
 
 #recipe-thumb {
   display: inline-block;
-  width: 212px;
-  margin: 0 2em 1em 0;
   border: 1px solid red; }
 
-#recipe-missed {
+#recipe-title {
   word-wrap: break-word; }
 
 /*# sourceMappingURL=stylesheet.css.map */

@@ -71,6 +71,7 @@ function createRecipeThumbnail (data) {
 
 		this.El = document.createElement("div")
 		this.El.id = "recipe-thumb";
+		
 
 		//add thumbnail image of recipe
 		var img = document.createElement("img");
@@ -97,7 +98,7 @@ function createRecipeThumbnail (data) {
 
 		document.getElementById("recipe-display").appendChild(this.El);
 		recipeThumbHeight();
-		
+
 	});
 }
 
@@ -110,4 +111,22 @@ function recipeThumbHeight () {
 	});
 
 	return childrenHeight;
+}
+
+function getRecipe(id) {
+
+
+
+	$.ajax({
+	    url: 'https://webknox-recipes.p.mashape.com/recipes/'+id+'/information', // The URL to the API. You can get this in the API page of the API you intend to consume
+	    type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+	    dataType: 'json',
+	    success: function(data) { 
+	    	
+	     },
+	    error: function(err) { alert(err); },
+	    beforeSend: function(xhr) {
+	    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
+    	}
+	});
 }

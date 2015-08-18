@@ -38,6 +38,10 @@ $(document).ready(function() {
 		ingredientsArr.length = 0;
 	});
 
+	$("#recipe-display").on('click', "#recipe-thumb", function(e){
+		$("#recipeModal").modal();
+	})
+
 
 	$.ajax({
 	    url: 'https://webknox-recipes.p.mashape.com/recipes/findByIngredients', // The URL to the API. You can get this in the API page of the API you intend to consume
@@ -67,11 +71,8 @@ function createIngredientButton (ingredient) {
 function createRecipeThumbnail (data) {
 
 	$.each(data, function(index, value){
-		console.log(value);
-
 		this.El = document.createElement("div")
 		this.El.id = "recipe-thumb";
-		
 
 		//add thumbnail image of recipe
 		var img = document.createElement("img");
@@ -114,8 +115,6 @@ function recipeThumbHeight () {
 }
 
 function getRecipe(id) {
-
-
 
 	$.ajax({
 	    url: 'https://webknox-recipes.p.mashape.com/recipes/'+id+'/information', // The URL to the API. You can get this in the API page of the API you intend to consume

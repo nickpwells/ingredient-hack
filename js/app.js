@@ -20,6 +20,12 @@ $(document).ready(function() {
 		$("#ingredients").val('');
 	});
 
+	$("button#submit-ingredients").click(function(e){
+		e.preventDefault();
+		$(".recipe-entry").toggle();
+		getRecipeThumbs();
+	});
+
 	//removes ingredient from list
 	$("#active-ingredients").on('click', '#active-ingredient', function(e){
 		e.preventDefault();
@@ -39,23 +45,38 @@ $(document).ready(function() {
 	});
 
 	$("#recipe-display").on('click', "#recipe-thumb", function(e){
+		console.log(this.id);
+		/*
+		$.ajax({
+		    url: 'https://webknox-recipes.p.mashape.com/recipes/'+id+'/information', // The URL to the API. You can get this in the API page of the API you intend to consume
+		    type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+		    dataType: 'json',
+		    success: function(data) { 
+		    	
+		     },
+		    error: function(err) { alert(err); },
+		    beforeSend: function(xhr) {
+		    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
+	    	}
+		});*/
 		$("#recipeModal").modal();
 	})
 
-
-	$.ajax({
-	    url: 'https://webknox-recipes.p.mashape.com/recipes/findByIngredients', // The URL to the API. You can get this in the API page of the API you intend to consume
-	    type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
-	    data: {"ingredients": "chicken", "number": "5"}, // Additional parameters here
-	    dataType: 'json',
-	    success: function(data) { 
-	    	createRecipeThumbnail(data);
-	     },
-	    error: function(err) { alert(err); },
-	    beforeSend: function(xhr) {
-	    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
-    	}
-	});
+	function getRecipeThumbs () {
+		$.ajax({
+		    url: 'https://webknox-recipes.p.mashape.com/recipes/findByIngredients', // The URL to the API. You can get this in the API page of the API you intend to consume
+		    type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+		    data: {"ingredients": "[chicken, eggs, salt, pepper, garlic, asdlfkj]", "number": "20"}, // Additional parameters here
+		    dataType: 'json',
+		    success: function(data) { 
+		    	createRecipeThumbnail(data);
+		     },
+		    error: function(err) { alert(err); },
+		    beforeSend: function(xhr) {
+		    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
+	    	}
+		});
+	}	
 
 });
 

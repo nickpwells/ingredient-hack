@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
   </head>
   <body>
-  
+
     <div class="navbar navbar-default">
       <div class="container-fluid">
         <h1>The Ingredient Hack<small id="about" data-toggle="modal" data-target="#aboutModal">About</small></h1>
@@ -31,55 +31,55 @@
         </div>
       </div>
     </div>
-      
-    <section class="content">
-      <div class="row container-fluid">
 
-        <div class="col-xs-3" id="sidebar">
+    <div class="recipe-entry">   
+
+      <div class="row container-fluid">
+        <div class="col-xs-4 col-xs-offset-4" id="sidebar">
           <h2>Welcome to The Ingredient Hack!</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis tenetur explicabo sequi pariatur, perferendis voluptates suscipit odit ipsa dicta perspiciatis, totam quasi autem dolorem. Sed earum dolore quasi quisquam sit.</p>
           <form>
             <div class="form-group">
               <label for="ingredientEntry">What's in your pantry?</label>
               <input type="text" class="form-control" id="ingredients" placeholder="e.g. chicken, rice, etc.">
-              <div class="buttonCenter">
-                <button class="btn btn-default btn-primary" type="submit" value="Submit">Submit</button>
+              <div class="ingredient-buttons">
+                <button class="btn btn-default btn-primary" type="submit" id="add-item">Add Item</button>
+                <button class="btn btn-default btn-primary" type="button" id="submit-ingredients">Get Recipes!</button>
               </div> 
             </div>
           </form>  
         </div>
-
-        <div class="col-xs-9" id="recipe-display"></div>
-
-        <!--Recipe Modal-->
-        <div class="modal fade" id="recipeModal" role="dialog">
-          <div class="modal-dialog">
-            
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Example Recipe</h4>
-              </div>
-              <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium unde, alias nostrum aperiam repudiandae soluta quasi, ipsa quisquam neque dolor numquam, delectus. Sed labore, maiores, qui placeat nesciunt voluptatibus deleniti!</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
       </div>
 
       <div class="row container-fluid">
-        <div class="col-xs-3" id="ingredient-display">
+        <div class="col-xs-4 col-xs-offset-4" id="ingredient-display">
           <h5>Ingredients<span id="clear">Clear</span></h5>
           <div id="active-ingredients"></div>
         </div>
       </div>
 
-    </section>  
+    </div>
+
+    <div class="container-fluid">
+      <div id="recipe-display"></div>
+
+      <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="aboutModalTitle">About</h4>
+            </div>
+            <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique, accusamus qui nobis aspernatur laborum quas quidem natus, veritatis pariatur distinctio saepe tempore explicabo hic iste consequatur animi iure voluptatibus!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

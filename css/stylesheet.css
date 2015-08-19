@@ -77,18 +77,20 @@ body {
   height: calc(100% - 40px);
   overflow: auto; }
 
-.buttonCenter {
+.ingredient-buttons {
+  width: 100%;
   text-align: center;
-  margin-top: 1em; }
+  margin: 1em auto 0 auto;
+  display: inline-block; }
 
-.buttonCenter button,
-.buttonCenter button:focus,
-.buttonCenter button:active {
+.ingredient-buttons button,
+.ingredient-buttons button:focus,
+.ingredient-buttons button:active {
   background-color: #673ab7;
   border-color: #673ab7;
   outline: none; }
 
-.buttonCenter button:hover {
+.ingredient-buttons button:hover {
   background-color: #512da8;
   border-color: #512da8; }
 

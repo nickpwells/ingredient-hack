@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	/*
+
 	var ingredientsArr = [];
 	var obj;
 
@@ -59,9 +61,11 @@ $(document).ready(function() {
 		    error: function(err) { alert(err); },
 		    beforeSend: function(xhr) {
 		    	    	}
-		});*/
+		});
 		$("#recipeModal").modal();
 	})
+
+	
 
 	function getRecipeThumbs () {
 		$.ajax({

@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	var ingredientsArr = [];
+	var obj;
 
 	//removes the placeholder in the submit form
 	$("#ingredients").on('click', function(e){
@@ -24,6 +25,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(".recipe-entry").toggle();
 		getRecipeThumbs();
+		console.log(obj);
 	});
 
 	//removes ingredient from list
@@ -56,8 +58,7 @@ $(document).ready(function() {
 		     },
 		    error: function(err) { alert(err); },
 		    beforeSend: function(xhr) {
-		    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
-	    	}
+		    	    	}
 		});*/
 		$("#recipeModal").modal();
 	})
@@ -70,14 +71,16 @@ $(document).ready(function() {
 		    dataType: 'json',
 		    success: function(data) { 
 		    	createRecipeThumbnail(data);
+		    	obj = data;
+		    	console.log(obj);
 		     },
 		    error: function(err) { alert(err); },
 		    beforeSend: function(xhr) {
 		    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
 	    	}
+
 		});
 	}	
-
 });
 
 function createIngredientButton (ingredient) {

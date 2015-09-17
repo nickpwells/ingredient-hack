@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+}
+
 	/*
 
 	var ingredientsArr = [];
@@ -156,4 +158,3 @@ function getRecipe(id) {
 	    	xhr.setRequestHeader("X-Mashape-Authorization", "95cPWKn2s2mshrWZr7MapR0N7IKnp118VyEjsnHs22zu7SUara"); // Enter here your Mashape key
     	}
 	});
-}
